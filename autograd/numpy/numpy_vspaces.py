@@ -4,7 +4,7 @@ from autograd.builtins import NamedTupleVSpace
 
 class ArrayVSpace(VSpace):
     def __init__(self, value):
-        value = np.asarray(value)
+        value = np.array(value, copy=False)
         self.shape = value.shape
         self.dtype = value.dtype
 
