@@ -2,11 +2,11 @@ name: Tests
 
 on:
   pull_request:
-    branches:
-    - master
   push:
     branches:
     - master
+  schedule:
+    - cron: "0 13 * * 1"  # Every Monday at 9AM EST
 
 env:
   PIP_DISABLE_PIP_VERSION_CHECK: '1'
